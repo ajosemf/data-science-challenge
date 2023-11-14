@@ -1,0 +1,11 @@
+python-dotenv
+numpy
+pandas
+matplotlib
+seaborn
+statsmodels
+scikit-learn
+ipykernel
+jupyter
+openpyxl
+fastparquet
