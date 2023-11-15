@@ -31,6 +31,9 @@ dockeruser@cba3f6d4e536:/home/projetos/data-science-challenge$ exit
 ```
 
 # Reprodução dos códigos
+
+Esta seção apresenta o passo a passo para reproduzir os códigos desenvolvidos para o desafio. Por ser uma etapa com um nível de dificuldade maior, foi preparado um vídeo que reproduz os passos descritos abaixo. O vídeo encontra-se em `docs/videos/jupyter.mp4`.
+
 Caso o container não esteja em execução, execute os comandos abaixo para iniciar o _container_ e acessá-lo:
 
 ```bash
