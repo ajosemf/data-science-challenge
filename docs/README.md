@@ -50,3 +50,36 @@ Fora do _container_, abra o navegador do seu computador e acesse o endereço `ht
 Caso tenha dúvidas sobre o uso do jupyter notebook, consulte a [documentação oficial](https://jupyter-notebook.readthedocs.io/en/stable/).
 
 Para finalizar a sessão do jupyter notebook, pressione `Ctrl + C` no terminal do _container_ e confirme a finalização com `y`.
+
+# Estrutura do projeto
+* O projeto está estruturado conforme a imagem abaixo:
+
+<img src='images/tree.png' height=200 style='margin-left:50px'>
+
+> * `Dockerfile`: arquivo de configuração do Docker para a criação do ambiente virtual.
+> * `docs`: diretório com o arquivo de documentação.
+> * `docs/README.md`: documentação técnica produzida como requisito do desafio.
+> * `LICENSE.txt`: arquivo de licença do projeto.
+> * `README.md`: documentação de orientação sobre o desafio.
+> * `requirements.txt`: arquivo com as dependências do projeto.
+> * `src`: diretório com os códigos fonte.
+> * `src/datasets`: diretório com os dados disponibilizados para o desafio.
+> * `src/datasets/staged`: diretório com os dados processados.
+> * `src/notebooks`: diretório com os notebooks jupyter empregados na análise e processamento dos dados.
+> * `.env`: arquivo com as variáveis de ambiente.
+> * `.gitignore`: arquivo com as configurações de arquivos a serem ignorados pelo git.
+
+* Foram implementados três jupyter notebooks para a análise e processamento dos dados:
+> * `src/notebooks/load_optimize.ipynb`: responsável por carregar e otimizar os dados.
+> * `src/notebooks/analysis.ipynb`: responsável pela análise exploratória dos dados e, por questões de simplicidade, para gerar o dataset pré-processado.
+> * `src/notebooks/train_predict.ipynb`: responsável por treinar e avaliar os modelos de regressão, bem como estimar os valores de material e execução para o projeto 4 do desafio.
+
+# Principais bibliotecas utilizadas
+
+> * `numpy`, `pandas`: bibliotecas empregadas para análise, manipulação e processamento de dados.
+> * `matplotlib`, `seaborn`: bibliotecas empregadas na visualização dos dados em forma de gráficos.
+> * `statsmodels`, `scikit-learn`: bibliotecas empregadas na implementação dos modelos de regressão, além de outras funcionalidades como normalizadores e métricas de avaliação.
+> * `jupyter`: biblioteca empregada para a implementação dos notebooks jupyter.
+> * `fastparquet`: biblioteca empregada para otimizar os dados para o formato `parquet`.
+
+Como boa prática em projetos de data science, os notebooks jupyter devem ser empregados apenas para análise e visualização de dados, enquanto que os scripts de processamento de dados e as APIs para chamada dos modelos devem ser implementados em arquivos python. No entanto, para fins de simplicidade e permitir a visualização dos resultados sem a necessidade de executar os códigos, todas as etapas foram implementadas em notebooks jupyter.
